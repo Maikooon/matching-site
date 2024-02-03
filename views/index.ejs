@@ -1,0 +1,54 @@
+<!-- 初めの画面 -->
+
+<!-- CSS-->
+<link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css">
+
+<!-- Html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- dataで指定したデータ -->
+    <h1><%= title %></h1>
+    <!-- ほかのページに飛びたい時 -->
+    <div class="container">
+      <h1>welcome to  index page </h1>
+    </div>
+    <div><a href="/add">新規作成</a></div>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>メール</th>
+          <th>年齢</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <!-- contentとして引き渡されたデータの表示の仕方 -->
+      <% for(var i in content){ %>
+        <tr>
+            <% var obj = content[i]; %>
+            <td><%= obj.id %></td>
+            <td><%= obj.name %></td>
+            <td><%= obj.mail %></td>
+            <td><%= obj.age %></td>
+            <td>
+              <form action="/edit" method="get">
+                <input type="hidden" name="id" value="<%= obj.id %>">
+                <input type="submit" value="更新">
+            </form>
+            </td>
+            <td>
+              <form action="/delete" method="get">
+                <input type="hidden" name="id" value="<%= obj.id %>">
+                <input type="submit" value="削除">
+              </form>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+  </body>
+</html>

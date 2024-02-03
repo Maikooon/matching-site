@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <head>
+    <h1>welcome to add page </h1>
+  </head>
+  <div role="main">
+    <p><%= content %></p>
+    <form action="/add" method="post">
+      <table>
+        <tr>
+          <th>NAME</th>
+          <td><input type="text" name="name" value=""></td>
+        </tr>
+        <tr>
+          <th>MAIL</th>
+          <td><input type="text" name="mail" value=""></td>
+        </tr>
+        <tr>
+          <th>AGE</th>
+          <td><input type="number" name="age" value=""></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td><input type="submit" value="送信"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

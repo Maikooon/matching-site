@@ -1,0 +1,281 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+ */
+
+
+ @import "compass/css3";
+
+body {
+    background-color: #fff;
+    color: #333;
+    margin-top: 9%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* タイトルのテンプレ */
+.title{
+    width:90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+}
+
+
+/* メイン画像 */
+.slide-container-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-wrapper-1 {
+    display: flex;
+    animation: slide-flow 20s infinite linear 1s both;
+}
+.slide{
+    width: 65%;
+    height: auto;
+    object-fit:cover;
+    border: 1px solid #ddd;
+}
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+
+/* 文字と画像を重ねて表示する */
+.layer{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.layer-bg{
+   /* background: url(https://thumb.ac-illust.com/52/52c43d0d9d6b014e5052cf65e195a908_t.jpeg) no-repeat 0 0; */
+    background-size: 100%;
+}
+
+.layer-txt{
+    width: 90%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+/* プラン紹介 */
+
+.service {
+    width: 90%;
+    height: 100%;
+    /* 縦並びにする */
+    flex-direction: column;   
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.service-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-items: center; 
+    display: relative;
+    align-items: center;
+}
+
+.service-txt{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    word-break: break-all;
+    padding-left: 5%;
+}
+
+/* About us  */
+
+
+.about-us-text{
+    width: 40%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-break: break-all;
+    text-align: center;
+}
+
+.about-us-container{
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    word-break: break-all;
+}
+
+/* mvv */
+.mvv{
+    width: 90%;
+    height: 100%;
+    /* 縦並びにする */
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+}
+
+.mvv-container{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    word-break: break-all;
+
+}
+
+/* 先生の紹介画面 */
+
+.person{
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    word-break: break-all;
+}
+
+.per-person{
+    width: 30%;
+    height: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.person-img{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    word-break: break-all;
+
+}
+.person-txt{
+    width:100%;
+    height:100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.card{
+    width: 80%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding-left: 15%;
+
+}
+.card-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 5%;
+}
+.card-img{
+    border-radius: 8px;
+    object-fit:cover;
+    
+
+}
+.card-txtbox{
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* 会社情報 */
+.info-container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
+.info-img{
+    width: 30%;
+    height: 100%;
+}
+.info-describe{
+    width: 50%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-break: break-all;
+    align-items: center;
+}
+
+.info-detail{
+    width: 70%;
+    height: 100%;
+    margin-top: 1%;
+    display: flex;
+    padding-left: 15%;
+    align-items:center;
+    padding-bottom: 8%;
+}
+.box1{
+    width:50%;
+    height: 100%;
+}
+
+
+/*contact */
+.contact{
+    width: 90%;
+    height: 100%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+}
+
+
+
+
+
+
