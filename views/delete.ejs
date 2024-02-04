@@ -13,19 +13,15 @@
     <table>
       <tr>
         <th>NAME</th>
-        <td><%= mydata.name %></td>
+        <td><%= test.id %></td>
       </tr>
       <tr>
         <th>MAIL</th>
-        <td><%= mydata.mail %></td>
-      </tr>
-      <tr>
-        <th>AGE</th>
-        <td><%= mydata.age %></td>
+        <td><%= test.todo %></td>
       </tr>
     </table>
     <form action="/delete" method="post">
-      <input type="hidden" name="id" value="<%= mydata.id %>">
+      <input type="hidden" name="id" value="<%= test.id %>">
       <p><input type="submit" value="送信"></p>
     </form>
   </div>

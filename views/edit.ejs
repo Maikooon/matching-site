@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+    <head>
+        <h1><%= title %></h1>
+    </head>
+    <div role="main">
+        <p><%= content %></p>
+        <form action="/edit" method="post">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text" name="id" value="<%= test.id %>"></td>
+                </tr>
+                <tr>
+                    <th>NAME</th>
+                    <td><input type="text" name="name" value="<%= test.name %>"></td>
+                </tr>
+                <tr>
+                    <tr></tr>
+                    <td><input type = 'submit' value = '変更を反映'></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+
